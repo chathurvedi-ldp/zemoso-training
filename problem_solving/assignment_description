@@ -1,0 +1,35 @@
+3. Data Encryption System: Rahul wants to send encoded messages to his friend Ram. Develop an algorithm to encode all the digits,
+ special characters, lower and upper case alphabets.
+
+
+problem identification:
+	to encrypt the given message
+
+problem decomposition:
+	1.find the contents of the message
+	2.encrypt the message
+
+pattern recognisation:
+	find a character and assigning the huffman code to it.
+
+abstraction
+	dosent concentrate on length of the message
+
+
+
+Algorithm:
+step1:start
+step2:take the input message to encrypt
+step3:find the frequencies of each characters
+step4:find the huffman tree for these characters using these frequencies
+step5:from this huffman tree find the huffman codes for each character
+step6:now find the encrypted message by replacing each character with its haffman code
+step7:stop
+
+
+
+time complexity:
+
+we will extract minimum values for 2(n-1) times.
+and to extract one minimum value it takes O(logn)
+so the total time complexity is O(nlogn)
