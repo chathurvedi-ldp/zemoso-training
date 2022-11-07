@@ -1,0 +1,41 @@
+<!--..Create a simple application which displays two counts:
+    Local Score, Session Score and a button to increment these
+     counts. Local score must persist in Local Storage and Session
+      score must persist in Session Storage and must reset on closing
+       the session.-->
+    <html>
+    <body>
+        <h1>Local Score</h1>
+        <button onclick="local()">Incriment</button>
+        <p id="lc"></p>
+        <h1>Session Score</h1>
+        <button onclick="session()">Incriment</button>
+        <p id="sc"></p>
+        <script>
+            function local(){
+                var lcount=localStorage.getItem('n');
+                if(lcount){
+                    ++lcount;
+                    localStorage.setItem('n',lcount);
+                }
+                else{
+                    localStorage.setItem('n',1);
+                }
+                const p=document.getElementById('lc');
+                p.textContent=localStorage.getItem('n');
+            }
+            function session(){
+                var scount=sessionStorage.getItem('n');
+                if(scount){
+                    ++scount;
+                    sessionStorage.setItem('n',scount);
+                }
+                else{
+                    sessionStorage.setItem('n',1);
+                }
+                const p=document.getElementById('sc');
+                p.textContent=sessionStorage.getItem('n');
+            }
+        </script>
+    </body>
+</html>
