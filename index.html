@@ -1,6 +1,100 @@
 <html>
-    <frameset rows="10%,*" framespacing="0">
-        <frame name="frame1" src="frame1.html" frameborder="0">
-        <frame name="frame2" src="home.html" frameborder="0" >
-    </frameset>
+    <head>
+    
+        <title>restaurant</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="sort()" onclick="bill(event)">
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="first"> </h2>
+            <hr>
+            <div class="modal-body">
+              
+            </div>
+        </div>
+      </div>
+      
+    <div class="container">
+        <div class="container-1" id="myUL">
+            <h1>Tables</h1>
+            <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Search table">
+            <div id="Table-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <a href="#"><b id="1">Table-1</b></a>
+                <h5>Rs.0 | Total items: 0</h5>
+              </div>
+              <div id="Table-2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <a href="#" ><b id="2">Table-2</b></a>
+                <h5>Rs.0 | Total items: 0</h5>
+              </div>
+              <div id="Table-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <a href="#" ><b id="3">Table-3</b></a>
+                <h5>Rs.0 | Total items: 0</h5>
+              </div>
+              <div id="Table-4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <a href="#" ><b id="4">Table-4</b></a>
+                <h5>Rs.0 | Total items: 0</h5>
+              </div>
+              <div id="Table-5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <a href="#" ><b id="5">Table-5</b></a>
+                <h5>Rs.0 | Total items: 0</h5>
+              </div>
+        </div>
+        <div class="containet-3" id="line"></div>
+        <div class="container-2" id="myUL2">
+            <h1>Menu</h1>
+            <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search menu.. by course, by food">
+              <div id="drga1" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="snacks">Crusty Garlic Focaccia with Melted Cheese</b>
+                <h5>105</h5>
+              </div>
+              <div id="drga2" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="snacks">French Fries</b>
+                <h5>120</h5>
+              </div>
+              <div id="drga3" draggable="true" class="item" ondragstart="drag(event)" >
+                <b class="snacks">Home Country Fries with Herbs</b>
+                <h5>130</h5>
+              </div>
+              <div id="drga4" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="snacks">French Fries with Cheese</b>
+                <h5>140</h5>
+              </div>
+              <div id="drga5" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="starters">Chicken 65</b>
+                <h5>200</h5>
+              </div>
+              <div id="drga6" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="starters">Panner 65</b>
+                <h5>140</h5>
+              </div>
+              <div id="drga7" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="main course">CB</b>
+                <h5>140</h5>
+              </div>
+              <div id="drga8" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="main course">MB</b>
+                <h5>140</h5>
+              </div>
+              <div id="drga9" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="desserts">Ice cream</b>
+                <h5>40</h5>
+              </div>
+              <div id="drga10" draggable="true" class="item" ondragstart="drag(event)">
+                <b class="desserts">Rasagolla</b>
+                <h5>40</h5>
+              </div>
+              <div id="drga11" draggable="true" class="item" ondragstart="drag(event)">
+                <b class='bewarages'>Coke</b>
+                <h5>60</h5>
+              </div>
+              <div id="drga12" draggable="true" class="item" ondragstart="drag(event)">
+                <b class='bewarages'>Milkshake</b>
+                <h5>80</h5>
+              </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    </body>
 </html>
