@@ -1,13 +1,20 @@
 import { Chip } from "@mui/material";
 import {styled} from "@mui/system";
-const Chip1 = (p:any) => {
+import { createTheme } from "@mui/material/styles";
+interface ChipProps{
+    label:string,
+}
+const theme=createTheme({
+    spacing: 4,
+})
+const Chip1 = (p:ChipProps) => {
     const Styles=styled("div")({
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
         padding: "4px 8px",
-        gap: "10px",
+        gap: theme.spacing(2.5),
         position: "absolute",
         width: "140px",
         height: "25px",
