@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/system";
 
-export const theme=createTheme({
-  spacing: [0, 4, 8, 16, 32, 64],
+const theme=createTheme({
+  spacing: [8,10,12,20,32],
   typography:{
     title: {
       fontFamily: 'Gilroy',
@@ -99,3 +99,4 @@ export const theme=createTheme({
       },
     },
 })
+export default theme;
