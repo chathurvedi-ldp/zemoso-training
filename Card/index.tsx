@@ -2,9 +2,9 @@ import { Card, CardContent } from "@mui/material";
 import Chip1 from "../../atoms/Chip";
 import Icon from "../../atoms/Icon";
 import Typographys from "../../atoms/Typographys";
-import { createTheme } from "@mui/material/styles";
 import {styled} from '@mui/system'
 import { ReactNode } from "react";
+import theme from "../../../Themeing"
 interface CardProps{
     ChipLabel:string,
     Icon1:ReactNode,
@@ -12,10 +12,7 @@ interface CardProps{
     Icon2:ReactNode,
     text2:string,
   };
-  const theme=createTheme({
-    spacing: 4,
-  })
-const Card1 = (p:CardProps) => {
+const Card1 = ({ChipLabel,text1,text2,Icon1,Icon2}:CardProps) => {
     const StyleIcon = styled('div')({
         display: "flex",
         justifyContent: "center",
@@ -67,14 +64,14 @@ const Card1 = (p:CardProps) => {
         <Card>
         <StyleCard>
             <CardContent>
-                <Chip1 label={p.ChipLabel} />
-                <StyleIcon> <Icon Icon={p.Icon1}/> </StyleIcon>
+                <Chip1 label={ChipLabel} />
+                <StyleIcon> <Icon Icon={Icon1}/> </StyleIcon>
                 <StyleStack>
                 <StyleTypoIcon>
-                <Typographys variant="inherit" children={p.text1} />
-                <Icon Icon={p.Icon2}/>
+                <Typographys variant="inherit" children={text1} />
+                <Icon Icon={Icon2}/>
                 </StyleTypoIcon>
-                <Typographys variant="h5" children={p.text2} sx={{color:"white"}}/>
+                <Typographys variant="h5" children={text2} sx={{color:"white"}}/>
                 </StyleStack>
             </CardContent>
         

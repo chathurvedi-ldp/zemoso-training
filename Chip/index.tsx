@@ -1,13 +1,10 @@
 import { Chip } from "@mui/material";
 import {styled} from "@mui/system";
-import { createTheme } from "@mui/material/styles";
+import theme from "../../../Themeing"
 interface ChipProps{
     label:string,
 }
-const theme=createTheme({
-    spacing: 4,
-})
-const Chip1 = (p:ChipProps) => {
+const Chip1 = ({label}:ChipProps) => {
     const Styles=styled("div")({
         display: "flex",
         flexDirection: "row",
@@ -30,7 +27,7 @@ const Chip1 = (p:ChipProps) => {
     return(
         <>
         <Styles>
-        <Chip label={p.label} />
+        <Chip label={label} />
         </Styles>
         
         </>
