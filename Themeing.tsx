@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/system";
 
 const theme=createTheme({
-  spacing: [8,10,12,22,32],
+  spacing: [8,10,12,22,30],
   typography:{
     title: {
       fontFamily: 'Gilroy',
